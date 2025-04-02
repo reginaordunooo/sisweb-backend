@@ -2,7 +2,7 @@ import { RequestHandler, Request, Response } from "express";
 import { Product } from "../models/product";
 
 // Create and Save a new Product
-export const createProduct: RequestHandler = (req: Request, res:Response): Promise<void> => { 
+export const createProduct: RequestHandler = (req: Request, res:Response) => { 
     //Validate request
     if (!req.body) {
         return res.status(400).json({
